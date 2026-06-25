@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <title>Publications Admin - Algérie Conseil</title>
+  <link rel="stylesheet" href="../css/style.css">
+</head>
+<body class="admin-page">
+
+<header class="admin-topbar">
+  <div>
+    <h1>Algérie Conseil</h1>
+    <p>Gestion des publications</p>
+  </div>
+  <button id="logoutBtn" class="admin-logout">Déconnexion</button>
+</header>
+
+<main class="admin-layout">
+  <aside class="admin-sidebar">
+    <a href="dashboard.html">🏠 Dashboard</a>
+    <a href="publications.html" class="active">📰 Publications</a>
+    <a href="messages.html">📨 Messages</a>
+    <a href="newsletter.html">📧 Newsletter</a>
+    <a href="../index.html?admin=true">🌍 Voir le site</a>
+  </aside>
+
+  <section class="admin-content fade-page">
+    <div class="admin-section-header">
+      <h2>Toutes les publications</h2>
+      <a href="dashboard.html" class="admin-main-btn">+ Ajouter</a>
+    </div>
+
+    <select id="filterType" class="admin-filter">
+      <option value="all">Toutes les catégories</option>
+      <option value="actualite">Actualité</option>
+      <option value="immobilier">Immobilier</option>
+      <option value="annonce">Petites annonces</option>
+      <option value="emploi">Offres d’emploi</option>
+      <option value="service">Services</option>
+    </select>
+
+    <div id="adminPublicationsList" class="admin-grid-list">
+      Chargement...
+    </div>
+  </section>
+</main>
+
+<script src="admin.js"></script>
+</body>
+</html>

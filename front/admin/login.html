@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <title>Connexion Admin - Algérie Conseil</title>
+  <link rel="stylesheet" href="../css/style.css">
+</head>
+<body class="login-page">
+
+<main class="login-wrapper">
+  <form class="login-card fade-page" id="loginForm">
+    <h1>Connexion Admin</h1>
+    <p>Accès réservé à l’administration d’Algérie Conseil.</p>
+
+    <input type="email" id="adminEmail" placeholder="Email admin" required>
+
+    <div class="password-container">
+      <input type="password" id="adminPassword" placeholder="Mot de passe" required>
+      <button type="button" id="togglePassword">👁</button>
+    </div>
+
+    <button type="submit" id="loginBtn">Se connecter</button>
+    <a href="../index.html" class="login-back-site">Retour au site</a>
+  </form>
+</main>
+
+<script src="admin.js"></script>
+</body>
+</html>

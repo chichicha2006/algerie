@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Accueil - Algérie Conseil</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<div id="header-container"></div>
+
+<section class="hero home-hero">
+  <div class="hero-shell">
+    <div class="hero-content hero-copy">
+      <span class="eyebrow">Plateforme d’informations et de services</span>
+      <h1>Ce site est là pour celles et ceux qui se renseignent sur l’Algérie</h1>
+      <p>
+        Algérie Conseil rassemble des informations, des services et des repères utiles pour les personnes
+        qui veulent mieux comprendre l’Algérie, préparer un projet, chercher une opportunité ou simplement
+        trouver des réponses fiables au même endroit.
+      </p>
+
+      <div class="hero-actions">
+        <a href="#presentation" class="btn">Découvrir le site</a>
+        <a href="contact.html" class="btn btn-secondary">Nous contacter</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<main>
+  <section id="presentation" class="content-box intro-section">
+    <div class="section-heading">
+      <span class="eyebrow">Pourquoi ce site</span>
+      <h2>Un espace pensé pour aider à comprendre, chercher et décider</h2>
+    </div>
+
+    <div class="intro-grid">
+      <div>
+        <p>
+          Algérie Conseil s’adresse à toutes les personnes qui veulent mieux se renseigner sur l’Algérie,
+          préparer un projet de voyage, d’installation ou d’investissement, ou simplement suivre des sujets
+          utiles du quotidien sans devoir naviguer entre plusieurs sites.
+        </p>
+        <p>
+          L’objectif est de proposer un site clair, rassurant et pratique, avec des contenus faciles à lire,
+          des accès rapides et une navigation qui va droit au but.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <section class="search-section">
+    <div class="section-heading">
+      <span class="eyebrow">Recherche rapide</span>
+      <h2>Trouvez un contenu sans perdre de temps</h2>
+      <p>Recherchez une annonce, un emploi, un bien immobilier ou une actualité.</p>
+    </div>
+
+    <form id="searchForm" class="search-form">
+      <input type="text" id="searchInput" placeholder="Ex : appartement Alger, emploi, service...">
+      <button type="submit">Rechercher</button>
+    </form>
+
+    <div id="searchResults" class="grid"></div>
+  </section>
+
+  <section class="newsletter-section">
+    <div class="newsletter-inner">
+      <div>
+        <span class="eyebrow">Newsletter</span>
+        <h2>Recevez les nouveautés et les conseils utiles sans bruit inutile</h2>
+        <p>Un email, quelques fois par mois, pour rester informé sur les sujets qui comptent vraiment.</p>
+      </div>
+
+      <form class="form newsletterForm">
+        <input type="email" placeholder="Votre adresse email" autocomplete="email" required>
+        <button type="submit">S’inscrire</button>
+      </form>
+    </div>
+  </section>
+</main>
+
+
+<div id="footer-container"></div>
+
+<div id="cookieModal" class="cookie-modal hidden">
+
+  <div class="cookie-box">
+
+    <h2>🍪 Gestion des cookies</h2>
+
+    <p>
+      Nous utilisons des cookies pour améliorer votre expérience,
+      analyser la fréquentation du site et proposer un contenu adapté.
+    </p>
+
+    <div class="cookie-actions">
+
+      <button id="rejectCookies" class="cookie-reject">
+        Refuser
+      </button>
+
+      <button id="acceptCookies" class="cookie-accept">
+        Accepter
+      </button>
+
+    </div>
+
+  </div>
+
+</div>
+
+<script src="js/components.js"></script>
+<script src="js/script.js"></script>
+</body>
+</html>

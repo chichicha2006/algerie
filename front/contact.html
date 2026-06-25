@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <title>Contact</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<div id="header-container"></div>
+
+<section class="page-header">
+  <h1>Nous contacter</h1>
+  <p>Envoyez-nous votre demande, nous vous répondrons dès que possible.</p>
+</section>
+
+<main>
+  <div class="contact-layout">
+    <div class="content-box">
+      <h2>Envoyer un message</h2>
+
+      <form class="form" id="contactForm">
+        <label>Nom</label>
+        <input type="text" id="nom" placeholder="Votre nom" required>
+
+        <label>Email</label>
+        <input type="email" id="email" placeholder="Votre email" required>
+
+        <label>Catégorie</label>
+        <select id="categorie" required>
+          <option value="Contact général">Contact général</option>
+          <option value="Immobilier">Immobilier</option>
+          <option value="Petites annonces">Petites annonces</option>
+          <option value="Offres d’emploi">Offres d’emploi</option>
+          <option value="Service Zawaj">Service Zawaj</option>
+          <option value="Services">Services</option>
+        </select>
+
+        <label>Message</label>
+        <textarea id="message" placeholder="Votre message" required></textarea>
+
+        <button type="submit">Envoyer le message</button>
+      </form>
+
+      <div id="contactSuccess" class="success-box hidden">
+        <h3>Message envoyé avec succès</h3>
+        <p>Votre message a bien été transmis.</p>
+        <a href="index.html" class="btn">Retour à l’accueil</a>
+      </div>
+    </div>
+
+    <div class="content-box">
+      <h2>Informations</h2>
+      <p>Utilisez ce formulaire pour toute demande concernant les annonces, l’immobilier, les services ou l’emploi.</p>
+      <a href="index.html" class="btn">Retour au site</a>
+    </div>
+  </div>
+</main>
+
+<div id="footer-container"></div>
+
+
+<script src="js/components.js"></script>
+<script src="js/script.js"></script>
+</body>
+</html>

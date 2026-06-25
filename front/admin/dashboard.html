@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <title>Dashboard Admin - Algérie Conseil</title>
+  <link rel="stylesheet" href="../css/style.css">
+</head>
+<body class="admin-page">
+
+<header class="admin-topbar">
+  <div>
+    <h1>Algérie Conseil</h1>
+    <p>Espace administrateur</p>
+  </div>
+  <button id="logoutBtn" class="admin-logout">Déconnexion</button>
+</header>
+
+<main class="admin-layout">
+  <aside class="admin-sidebar">
+    <a href="dashboard.html" class="active">🏠 Dashboard</a>
+    <a href="publications.html">📰 Publications</a>
+    <a href="messages.html">📨 Messages</a>
+    <a href="newsletter.html">📧 Newsletter</a>
+    <a href="../index.html?admin=true">🌍 Voir le site</a>
+  </aside>
+
+  <section class="admin-content fade-page">
+    <div class="admin-welcome">
+      <h2>Bonjour Admin 👋</h2>
+      <p>Bienvenue sur le tableau de bord d’Algérie Conseil.</p>
+    </div>
+
+    <div class="admin-stats" id="adminStats">
+      <div class="admin-stat-card skeleton"></div>
+      <div class="admin-stat-card skeleton"></div>
+      <div class="admin-stat-card skeleton"></div>
+    </div>
+
+    <div class="quick-actions">
+      <a href="#publicationForm" class="quick-card">➕ Nouvelle publication</a>
+      <a href="publications.html" class="quick-card">📰 Gérer les publications</a>
+      <a href="messages.html" class="quick-card">📨 Lire les messages</a>
+      <a href="newsletter.html" class="quick-card">📧 Newsletter</a>
+    </div>
+
+    <div class="admin-panel">
+      <h2>Ajouter une publication</h2>
+
+      <form class="form admin-form" id="publicationForm">
+        <label>Catégorie</label>
+        <select id="type" required>
+          <option value="actualite">Actualité</option>
+          <option value="immobilier">Immobilier</option>
+          <option value="annonce">Petite annonce</option>
+          <option value="emploi">Offre d’emploi</option>
+          <option value="service">Service</option>
+        </select>
+
+        <label>Badge</label>
+        <input type="text" id="badge" placeholder="Location, CDI, Nouveau...">
+
+        <label>Titre</label>
+        <input type="text" id="titre" placeholder="Titre" required>
+
+        <label>Ville</label>
+        <input type="text" id="ville" placeholder="Ville">
+
+        <label>Prix</label>
+        <input type="text" id="prix" placeholder="Prix">
+
+        <label>Image</label>
+        <input type="file" id="image" accept="image/*">
+
+        <label>Description</label>
+        <textarea id="description" placeholder="Description" required></textarea>
+
+        <button type="submit" class="admin-main-btn">Publier</button>
+      </form>
+    </div>
+  </section>
+</main>
+
+<script src="admin.js"></script>
+</body>
+</html>

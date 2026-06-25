@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <title>Messages reçus - Algérie Conseil</title>
+  <link rel="stylesheet" href="../css/style.css">
+</head>
+<body class="admin-page">
+
+<header class="admin-topbar">
+  <div>
+    <h1>Algérie Conseil</h1>
+    <p>Messages reçus</p>
+  </div>
+  <button id="logoutBtn" class="admin-logout">Déconnexion</button>
+</header>
+
+<main class="admin-layout">
+  <aside class="admin-sidebar">
+    <a href="dashboard.html">🏠 Dashboard</a>
+    <a href="publications.html">📰 Publications</a>
+    <a href="messages.html" class="active">📨 Messages</a>
+    <a href="newsletter.html">📧 Newsletter</a>
+    <a href="../index.html?admin=true">🌍 Voir le site</a>
+  </aside>
+
+  <section class="admin-content fade-page">
+    <h2>Messages reçus</h2>
+    <div id="messagesList" class="admin-grid-list">Chargement...</div>
+  </section>
+</main>
+
+<script src="admin.js"></script>
+</body>
+</html>
