@@ -1,24 +1,45 @@
-async function loadComponent(id, file) {
-  const container = document.getElementById(id);
+document.addEventListener("DOMContentLoaded", () => {
+  loadHeader();
+  loadFooter();
+});
 
-  if (!container) return;
+function loadHeader() {
+  const headerContainer = document.getElementById("header-container");
 
-  const response = await fetch(file);
+  if (!headerContainer) return;
 
-  if (!response.ok) {
-    console.error("Impossible de charger :", file);
-    return;
-  }
-
-  const html = await response.text();
-  container.innerHTML = html;
+  fetch("components/header.html")
+    .then((res) => res.text())
+    .then((data) => {
+      headerContainer.innerHTML = data;
+      initMenu();
+    });
 }
 
-async function loadAllComponents() {
-  await loadComponent("header-container", "components/header.html");
-  await loadComponent("footer-container", "components/footer.html");
+function loadFooter() {
+  const footerContainer = document.getElementById("footer-container");
 
-  document.dispatchEvent(new Event("componentsLoaded"));
+  if (!footerContainer) return;
+
+  fetch("components/footer.html")
+    .then((res) => res.text())
+    .then((data) => {
+      footerContainer.innerHTML = data;
+
+      const year = document.getElementById("year");
+      if (year) {
+        year.textContent = new Date().getFullYear();
+      }
+    });
 }
 
-loadAllComponents();
+function initMenu() {
+  const menuBtn = document.querySelector(".menu-btn");
+  const navLinks = document.querySelector(".nav-links");
+
+  if (!menuBtn || !navLinks) return;
+
+  menuBtn.addEventListener("click", () => {
+    navLinks.classList.toggle("active");
+  });
+}

@@ -14,7 +14,7 @@ function bindMenuToggle() {
   });
 }
 
-bindMenuToggle();
+//bindMenuToggle();
 
 document.addEventListener("componentsLoaded", () => {
   bindMenuToggle();
