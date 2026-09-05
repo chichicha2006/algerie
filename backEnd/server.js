@@ -2,12 +2,13 @@ const express = require("express");
 const cors = require("cors");
 const mongoose = require("mongoose");
 const jwt = require("jsonwebtoken");
-require("dotenv").config();
+const path = require("path");
+
+require("dotenv").config({ path: path.join(__dirname, ".env") });
 
 const app = express();
 
 const multer = require("multer");
-const path = require("path");
 
 app.use(cors());
 app.use(express.json());
