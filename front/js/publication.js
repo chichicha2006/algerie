@@ -1,4 +1,4 @@
-const API_URL = "http://192.168.1.120:5000";
+const API_URL = "http://localhost:5000";
 
 const params = new URLSearchParams(window.location.search);
 const id = params.get("id");
